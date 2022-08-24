@@ -21,6 +21,9 @@ body{
 }
 .wrapper{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper .static-txt{
@@ -75,7 +78,11 @@ body{
     100%{
       left: 0;
     }
-  }
+}
+
+.links {
+    margin-top: 20px;
+}
 
 .network {
     display: flex;
@@ -93,11 +100,92 @@ body{
 }
 
 .network-icons {
-    font-size: 24px;
-    color: white;
+    font-size: 35px;
+    color: #afafaf;
+    transition: .4s;
+}
+
+.network-icons:hover {
+    color: #419D78;
 }
 
 .fa-file-pdf {
-    font-size: 22px;
+    font-size: 30px;
 }
 
+@media (max-width: 686px) {
+    .wrapper .static-txt {
+        font-size: 40px;
+        height: auto;
+    }
+
+    .dynamic-txts li {
+        font-size: 40px;
+    }
+
+    .dynamic-txts li span::after{
+        top: 0px;
+    }
+
+    .network-icons {
+        font-size: 30px;
+    }
+
+    .fa-file-pdf {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 467px) {
+    .wrapper .static-txt {
+        font-size: 35px;
+    }
+
+    .dynamic-txts li {
+        font-size: 35px;
+    }
+
+    .network-icons {
+        font-size: 25px;
+    }
+
+    .fa-file-pdf {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper .static-txt {
+        font-size: 30px;
+    }
+
+    .dynamic-txts li {
+        font-size: 30px;
+    }
+
+    .network-icons {
+        font-size: 25px;
+    }
+
+    .fa-file-pdf {
+        font-size: 20px;
+    }
+} 
+
+@media (max-width: 319px) {
+    .wrapper .static-txt {
+        font-size: 25px;
+    }
+
+    .dynamic-txts li {
+        font-size: 25px;
+    }
+
+    .network-icons {
+        font-size: 20px;
+    }
+
+    .fa-file-pdf {
+        font-size: 15px;
+    }
+}
