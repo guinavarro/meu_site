@@ -1,79 +1,103 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
-
-li {
-    list-style: none;
-}
-
-body {
-    font-family: 'Source Code Pro', monospace;
-    background-color: black;
-    /* background-color: #1E2D2F; */
-    display: grid;
+body{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #181818;
+}
+.brackets{
     color: white;
-    /* color: #aeaeae; */
+}
+.wrapper{
+    display: flex;
 }
 
-.title {
-    font-size: 36px;
-    font-weight: normal;
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
 }
 
-.box {
-    /* background: #eee; */
-    background: #020202;
-    padding: 2rem;
-    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.16);
-    border-radius: 50px;
-    text-align: center;
+.wrapper .dynamic-txts{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
 }
 
-.profile-pic {
-    border-radius: 50%;
-    margin: 0 auto 2rem auto;
+.dynamic-txts li{
+    list-style: none;
+    color: #419D78;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(2) infinite;
 }
 
-.profile span {
-    font-size: 24px;
+@keyframes slide{
+    100%{
+        top: -180px;
+    }
 }
 
-.profile p {
-    font-size: 18px;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+.dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
 }
 
-.redes-sociais {
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #181818;
+    border-left: 2px solid #419D78;
+    animation: typing 3s steps(8) infinite;
+}
+
+@keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+.network {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.redes-sociais li {
+.network li {
     margin-right: 1rem;
+    list-style: none;
 }
 
-.redes-sociais li:nth-child(4) {
+.network li:nth-child(4) {
     margin-right: 0;
 }
 
 .network-icons {
-    font-size: 40px;
+    font-size: 24px;
     color: white;
-    /* color: #1E2D2F; */
 }
 
 .fa-file-pdf {
-    font-size: 34px;
+    font-size: 22px;
 }
+
